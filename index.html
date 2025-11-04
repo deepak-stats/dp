@@ -3,6 +3,61 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
+<style>
+  .news-section {
+    width: 300px;
+    background: white;
+    margin: 50px auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .news-section h2 {
+    text-align: center;
+    color: #1a73e8;
+    border-bottom: 2px solid #1a73e8;
+    padding-bottom: 10px;
+  }
+
+  .news-container {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .news-list {
+    display: flex;
+    flex-direction: column;
+    animation: scrollNews 10s linear infinite;
+  }
+
+  .news-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    color: #333;
+  }
+
+  .news-item a {
+    text-decoration: none;
+    color: #1a73e8;
+    font-weight: bold;
+  }
+
+  .news-item a:hover {
+    text-decoration: underline;
+  }
+
+  @keyframes scrollNews {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+  }
+
+  /* Pause animation on hover */
+  .news-container:hover .news-list {
+    animation-play-state: paused;
+  }
+</style>
 <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
@@ -108,23 +163,25 @@
   <figcaption align="center"><font size= 1>Best way to reach me is via email.</font></figcaption>
 </figure>
 </p>
-<aside class="sidebar">
-    <h3>📰 Latest News</h3>
-    <div id="newsList">
-      <div class="news-item">
-        <a href="#">Company Q3 profits rise 15%</a>
-        <div class="news-time">2 hours ago</div>
-      </div>
-      <div class="news-item">
-        <a href="#">New AI tool launched for marketing analytics</a>
-        <div class="news-time">5 hours ago</div>
-      </div>
-      <div class="news-item">
-        <a href="#">CEO to speak at Global Tech Summit</a>
-        <div class="news-time">1 day ago</div>
-      </div>
+<div class="news-section">
+  <h2>📰 Latest News</h2>
+  <div class="news-container">
+    <div class="news-list">
+      <div class="news-item"><a href="#">Company Q3 profits rise by 18%</a></div>
+      <div class="news-item"><a href="#">AI breakthrough revolutionizes analytics</a></div>
+      <div class="news-item"><a href="#">Markets rally after global policy change</a></div>
+      <div class="news-item"><a href="#">New eco-friendly energy storage launched</a></div>
+      <div class="news-item"><a href="#">CEO to keynote tech innovation summit</a></div>
+
+      <!-- Repeat for smooth scroll loop -->
+      <div class="news-item"><a href="#">Company Q3 profits rise by 18%</a></div>
+      <div class="news-item"><a href="#">AI breakthrough revolutionizes analytics</a></div>
+      <div class="news-item"><a href="#">Markets rally after global policy change</a></div>
+      <div class="news-item"><a href="#">New eco-friendly energy storage launched</a></div>
+      <div class="news-item"><a href="#">CEO to keynote tech innovation summit</a></div>
     </div>
-  </aside>
+  </div>
+</div>
 <!---
 <p>Deepak Prajapati<br/> 
 Office: Chintan Building (Faculty Block),<br/>
